@@ -6,6 +6,7 @@ const projectData = {
         images: [
             "images/PulseoutProjectImage.jpeg",
             "images/PulseoutProjectSongPageImage.jpeg",
+            "images/PulseoutSearchResultsImage.png"
         ],
         description: `PulseOut is a comprehensive social media application designed specifically for music lovers. It solves the problem of disjointed music sharing by allowing users to post reviews, rate albums, and follow friends' listening habits in real-time. 
                 
@@ -21,7 +22,7 @@ const projectData = {
         images: [
             "images/PivotIrrigationControlSystem.jpg",
             "images/BetzenIrrigationManagerStaticScreenshots.png",
-            "https://placehold.co/800x600?text=Soil+Sensor+Data"
+            "images/PushoverUpdatesMobile.png"
         ],
         description: `This embedded systems project reduces water waste and improves workflow efficiency in agricultural settings. Using Particle Boron boards, the system monitors center pivot irrigation systems and allows farmers to remotely manage pivot irrigation and ground well systems via a static web interface.`,
         techStack: ["C++", "Particle IoT", "HTML5", "CSS3", "Embedded Systems"],
