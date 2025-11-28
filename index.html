@@ -5,12 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Paul Betzen - Software Engineer">
+
     <title>Paul Betzen</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-white antialiased">
+    <!--Top Header-->
     <header class="fixed top-0 left-0 right-0 z-50 bg-gray-200 border-b-2 border-b-cyan-600 shadow-md">
         <nav class="container mx-auto py-4 px-6 flex justify-center sm:justify-between items-center">
             <a href="#" class="hidden sm:flex text-2xl font-bold">Paul Betzen</a>
@@ -22,63 +26,79 @@
         </nav>
     </header>
 
-    <main class="container mx-auto pt-24">
+    <!--Home Card-->
+    <main class="container mx-auto pt-24 px-4 sm:px-6">
         <section id="home" class="min-h-[80vh] flex justify-center items-center bg-gray-200 shadow-lg rounded-lg mb-12">
             <div class="text-center flex-col mb-20">
-                <h1 class="text-6xl md:text-8xl font-bold mb-2 hover:scale-110 transition duration-800">Paul Betzen</h1>
-                <p class="text-lg text-gray-700 mb-6">UTD Computer Science Portfolio</p>
+                <h1 class="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 hover:scale-105 transition duration-500">Paul
+                    Betzen</h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-2 font-medium">Software Engineer</p>
+                <p class="text-base text-gray-500 mb-8">Full Stack Development • Embedded Systems • IoT</p>
+
                 <a href="#projects"
                     class="border-cyan-600 bg-gray-300 border-2 text-black font-bold py-3 px-5 hover:bg-cyan-600 hover:text-white rounded-lg transition duration-200">View
                     Projects</a>
             </div>
         </section>
 
+        <!--Projects Card-->
         <section id="projects" class="justify-center items-center mb-4 bg-gray-400 shadow-lg rounded-lg p-6">
             <h2
                 class="mx-auto w-fit py-4 px-6 text-center font-bold text-4xl bg-cyan-600 text-white shadow-lg rounded-lg  mb-4">
                 Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div
-                    class="bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="images/PulseoutProjectImage.jpeg" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Social Music Platform</h3>
-                        <p class="text-gray-700 mb-4">A full-stack music blog website featuring user profiles,
-                            comments, Spotify API integration, and user authentication.</p>
-                        <div class="mb-4">
-                            <span
-                                class="inline-block bg-blue-500 text-white text-xs px-3 py-1 rounded-full mr-2 mb-2">React</span>
-                            <span
-                                class="inline-block bg-green-500 text-white text-xs px-3 py-1 rounded-full mr-2 mb-2">Node.js</span>
-                            <span
-                                class="inline-block bg-green-700 text-white text-xs px-3 py-1 rounded-full mr-2 mb-2">PostgreSQL</span>
+                <!--Pulseout Card-->
+                <div onclick="openModal('pulseout')"
+                    class="bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/PulseoutProjectImage.jpeg"
+                            onerror="this.src='https://placehold.co/600x400?text=Social+Music+Platform'"
+                            alt="Social Music Platform"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">Social Music Platform
+                        </h3>
+                        <p class="text-gray-700 mb-4 flex-grow">A full-stack music blog website featuring user profiles,
+                            comments, and Spotify API integration.</p>
+
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">React</span>
+                            <span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Next.js</span>
+                            <span class="bg-green-700 text-white text-xs px-2 py-1 rounded-full">PostgreSQL</span>
                         </div>
-                        <div class="flex justify-between">
-                            <a href="https://github.com/Paulthelol/pulseout" target="_blank"
-                                class="text-cyan-600 hover:text-cyan-500 font-medium transition duration-300">View Code
-                                (GitHub)</a>
-                            <a href="https://pulseout.vercel.app/" target="_blank"
-                                class="text-cyan-600 hover:text-cyan-500 font-medium transition duration-300">Live
-                                Demo</a>
+
+                        <div
+                            class="mt-auto border-t pt-4 border-gray-300 flex justify-between items-center text-cyan-600 font-semibold text-sm">
+                            <span>View Details</span>
+                            <span>&rarr;</span>
                         </div>
                     </div>
                 </div>
 
-                <div
-                    class="bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="images/PivotIrrigationControlSystem.jpg" alt="Project 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">IoT Irrigation Control</h3>
-                        <p class="text-gray-700 mb-4">A remote irrigation management solution powered by Particle Boron
-                            development boards and controlled via static HTML website.</p>
-                        <div class="mb-4">
-                            <span
-                                class="inline-block bg-blue-700 text-white text-xs px-3 py-1 rounded-full mr-2 mb-2">C++</span>
-                            <span
-                                class="inline-block bg-red-500 text-white text-xs px-3 py-1 rounded-full mr-2 mb-2">HTML5</span>
+                <!--IoT Control Card-->
+                <div onclick="openModal('iot')"
+                    class="bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/PivotIrrigationControlSystem.jpg"
+                            onerror="this.src='https://placehold.co/600x400?text=IoT+System'" alt="IoT Project"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">IoT Irrigation Control
+                        </h3>
+                        <p class="text-gray-700 mb-4 flex-grow">Remote irrigation management solution powered by
+                            Particle Boron boards.</p>
+
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-700 text-white text-xs px-2 py-1 rounded-full">C++</span>
+                            <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">HTML5</span>
                         </div>
-                        <div class="flex justify-between">
-                            <!--Update with links in future if available-->
+
+                        <div
+                            class="mt-auto border-t pt-4 border-gray-300 flex justify-between items-center text-cyan-600 font-semibold text-sm">
+                            <span>View Details</span>
+                            <span>&rarr;</span>
                         </div>
                     </div>
                 </div>
@@ -118,8 +138,94 @@
     </main>
 
     <footer class="justify-center flex">
-        <p class="bg-gray-200 shadow-lg rounded px-4 mb-2">2025 Paul Betzen.</p>
+        <p class="bg-gray-200 shadow-lg rounded px-4 mb-2">© 2025 Paul Betzen.</p>
     </footer>
+
+    <!-- MODAL COMPONENT -->
+    <div id="projectModal" class="fixed inset-0 z-[60] hidden overflow-y-auto" aria-labelledby="modal-title"
+        role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="closeModal()">
+        </div>
+
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl border-t-4 border-cyan-600">
+
+                <button type="button" onclick="closeModal()"
+                    class="absolute top-4 right-4 z-20 p-2 bg-white/80 hover:bg-white rounded-full text-gray-500 hover:text-red-500 focus:outline-none transition shadow-sm">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start flex-col">
+
+                        <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                            <h3 class="text-2xl md:text-3xl font-bold leading-6 text-gray-900 mb-6" id="modalTitle">
+                                Project Title</h3>
+
+                            <!-- CAROUSEL CONTAINER -->
+                            <div
+                                class="relative w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-6 shadow-inner group">
+
+                                <!-- Carousel Track -->
+                                <div id="carouselTrack"
+                                    class="flex h-full transition-transform duration-500 ease-out cursor-grab active:cursor-grabbing">
+                                </div>
+
+                                <!-- Left Arrow -->
+                                <button onclick="prevSlide()" id="prevBtn"
+                                    class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none transition backdrop-blur-sm">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+
+                                <!-- Right Arrow -->
+                                <button onclick="nextSlide()" id="nextBtn"
+                                    class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none transition backdrop-blur-sm">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+
+                                <!-- Dots Indicator -->
+                                <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2"
+                                    id="carouselDots">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                                <div class="md:col-span-2">
+                                    <h4 class="text-lg font-bold text-cyan-700 mb-2 border-b border-gray-200 pb-1">
+                                        Overview</h4>
+                                    <p id="modalDescription" class="text-gray-600 leading-relaxed whitespace-pre-line">
+                                        Description loads here...
+                                    </p>
+                                </div>
+
+                                <div class="bg-gray-50 p-5 rounded-xl h-fit border border-gray-100">
+                                    <h4 class="font-bold text-xs uppercase tracking-wider text-gray-500 mb-3">
+                                        Technologies</h4>
+                                    <div id="modalTech" class="flex flex-wrap gap-2 mb-6"></div>
+
+                                    <h4 class="font-bold text-xs uppercase tracking-wider text-gray-500 mb-3">Resources
+                                    </h4>
+                                    <div id="modalLinks" class="flex flex-col space-y-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
