@@ -27,7 +27,9 @@ jobs:
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "README.md" \
-            --exclude ".DS_Store"
+            --exclude ".DS_Store" \
+            --exclude "input.css" \
+            --exclude "nodeCommand.txt"
 
       - name: Invalidate CloudFront Cache
         run: |
