@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Paul Betzen - Software Engineer">
+    <meta name="description" content="Portfolio of Paul Betzen - Software Engineer">
 
     <title>Paul Betzen</title>
 
-    <link href="output.css" rel="stylesheet"></script>
+    <link href="output.css" rel="stylesheet">
+    </script>
 </head>
 
 <body class="bg-white antialiased">
@@ -56,10 +56,10 @@
                             alt="Social Music Platform"
                             class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="p-6 flex-grow flex flex-col">
+                    <div class="p-6 grow flex flex-col">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">Social Music Platform
                         </h3>
-                        <p class="text-gray-700 mb-4 flex-grow">A full-stack music blog website featuring user profiles,
+                        <p class="text-gray-700 mb-4 grow">A full-stack music blog website featuring user profiles,
                             comments, and Spotify API integration.</p>
 
                         <div class="mb-4 flex flex-wrap gap-2">
@@ -84,15 +84,44 @@
                             onerror="this.src='https://placehold.co/600x400?text=IoT+System'" alt="IoT Project"
                             class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="p-6 flex-grow flex flex-col">
+                    <div class="p-6 grow flex flex-col">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">IoT Irrigation Control
                         </h3>
-                        <p class="text-gray-700 mb-4 flex-grow">Remote irrigation management solution powered by
+                        <p class="text-gray-700 mb-4 grow">Remote irrigation management solution powered by
                             Particle Boron boards.</p>
 
                         <div class="mb-4 flex flex-wrap gap-2">
                             <span class="bg-blue-700 text-white text-xs px-2 py-1 rounded-full">C++</span>
                             <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">HTML5</span>
+                        </div>
+
+                        <div
+                            class="mt-auto border-t pt-4 border-gray-300 flex justify-between items-center text-cyan-600 font-semibold text-sm">
+                            <span>View Details</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Pulseout Card-->
+                <div onclick="openModal('pulseout')"
+                    class="bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/PulseoutProjectImage.jpeg"
+                            onerror="this.src='https://placehold.co/600x400?text=Social+Music+Platform'"
+                            alt="Social Music Platform"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">Social Music Platform
+                        </h3>
+                        <p class="text-gray-700 mb-4 grow">A full-stack music blog website featuring user profiles,
+                            comments, and Spotify API integration.</p>
+
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">React</span>
+                            <span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Next.js</span>
+                            <span class="bg-green-700 text-white text-xs px-2 py-1 rounded-full">PostgreSQL</span>
                         </div>
 
                         <div
@@ -142,10 +171,9 @@
     </footer>
 
     <!-- MODAL COMPONENT -->
-    <div id="projectModal" class="fixed inset-0 z-[60] hidden overflow-y-auto" aria-labelledby="modal-title"
-        role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="closeModal()">
-        </div>
+    <div id="projectModal" class="fixed inset-0 z-60 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-gray-900/75 transition-opacity backdrop-blur-sm" onclick="closeModal()"></div>
 
         <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
             <div
