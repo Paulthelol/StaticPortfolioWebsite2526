@@ -10,8 +10,8 @@ const projectData = {
         ],
         description: `PulseOut is a social media application designed specifically for music lovers. It solves the problem of disjointed music sharing by allowing users to post reviews, discover trending songs, and explore friends' favorites in real-time. 
                 
-                The system leverages the Spotify API to pull accurate metadata for millions of songs and artists. The backend handles complex relationships between users, songs, and comments using a normalized PostgreSQL schema.`,
-        techStack: ["React", "Next.js", "Tailwind CSS", "PostgreSQL", "Spotify API", "Vercel"],
+                The system leverages the Spotify API to pull accurate metadata for millions of songs and artists. The backend handles complex relationships between users, songs, and comments using a normalized PostgreSQL schema. This schema is managed using Drizzle ORM which helps simplify schema management and deployoment.`,
+        techStack: ["React", "Next.js", "Tailwind CSS", "PostgreSQL", "Spotify API", "Vercel", "Drizzle ORM"],
         links: [
             { text: "View Source Code", url: "https://github.com/Paulthelol/pulseout", icon: "github" },
             { text: "Live Demo", url: "https://pulseout.vercel.app/", icon: "external" }
@@ -41,7 +41,7 @@ const projectData = {
         The use of Mars MIPS simulator allowed for easier debugging through the use step-by-step instruction execution and the ability to view the content of all registers and system memory.`,
         techStack: ["C++", "MIPS Assembly", "Mars MIPS Simulator"],
         links: [
-            { text: "Particle Boron Board", url: "https://docs.particle.io/boron/", icon: "doc" }
+            { text: "MARS MIPS Assembly Simulator", url: "https://computerscience.missouristate.edu/mars-mips-simulator.htm", icon: "doc" }
         ]
     },
     personalWebsite: {
@@ -50,7 +50,7 @@ const projectData = {
             "images/personalWebsiteScreenshot1.png",
             "images/personalWebsiteScreenshot2.png"
         ],
-        description: `Placeholder text...`,
+        description: `This static personal website is hosted on AWS using an S3 bucket for storage, with CloudFront handling domain routing, SSL/TLS certificates, and global caching for fast, secure delivery. When changes are pushed to the main branch, GitHub Actions automatically deploys updates to the S3 bucket and invalidates the current CloudFront cache.`,
         techStack: ["HTML", "Javascript", "Tailwind CSS", "Amazon Web Services"],
         links: [
             { text: "View Source Code", url: "https://github.com/Paulthelol/StaticPortfolioWebsite2526", icon: "github" }
