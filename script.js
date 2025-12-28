@@ -8,10 +8,10 @@ const projectData = {
             "images/PulseoutProjectSongPageImage.jpeg",
             "images/PulseoutSearchResultsImage.png"
         ],
-        description: `PulseOut is a comprehensive social media application designed specifically for music lovers. It solves the problem of disjointed music sharing by allowing users to post reviews, rate albums, and follow friends' listening habits in real-time. 
+        description: `PulseOut is a social media application designed specifically for music lovers. It solves the problem of disjointed music sharing by allowing users to post reviews, discover trending songs, and explore friends' favorites in real-time. 
                 
-                The system leverages the Spotify API to pull accurate metadata for millions of songs and artists. The backend handles complex relationships between users, songs, and comments using a normalized PostgreSQL schema.`,
-        techStack: ["React", "Next.js", "Tailwind CSS", "PostgreSQL", "Spotify API"],
+                The system leverages the Spotify API to pull accurate metadata for millions of songs and artists. The backend handles complex relationships between users, songs, and comments using a normalized PostgreSQL schema. This schema is managed using Drizzle ORM which helps simplify schema management and deployoment.`,
+        techStack: ["React", "Next.js", "Tailwind CSS", "PostgreSQL", "Spotify API", "Vercel", "Drizzle ORM"],
         links: [
             { text: "View Source Code", url: "https://github.com/Paulthelol/pulseout", icon: "github" },
             { text: "Live Demo", url: "https://pulseout.vercel.app/", icon: "external" }
@@ -25,9 +25,35 @@ const projectData = {
             "images/PushoverUpdatesMobile.png"
         ],
         description: `This embedded systems project reduces water waste and improves workflow efficiency in agricultural settings. Using Particle Boron boards, the system monitors center pivot irrigation systems and allows farmers to remotely manage pivot irrigation and ground well systems via a static web interface.`,
-        techStack: ["C++", "Particle IoT", "HTML5", "CSS3", "Embedded Systems"],
+        techStack: ["C++", "Particle IoT", "HTML", "CSS", "Embedded Systems"],
         links: [
             { text: "Particle Boron Board", url: "https://docs.particle.io/boron/", icon: "doc" }
+        ]
+    },
+    assemblyMatchGame: {
+        title: "MIPS Assembly Multiplication Match Game",
+        images: [
+            "images/matrixmultiplication1.png",
+            "images/matrixmultiplication2.png"
+        ],
+        description: `This MIPS assembly project's primary focus was understanding the design and implemention of basic assembly programs. To help ease implementation in assembly language, the project was first implemented in C++. This higher-level code was then conceptually translated into lower-level assembly code which was organized into various files, each of which corresponded to a specific function.
+        
+        The use of Mars MIPS simulator allowed for easier debugging through the use step-by-step instruction execution and the ability to view the content of all registers and system memory.`,
+        techStack: ["C++", "MIPS Assembly", "Mars MIPS Simulator"],
+        links: [
+            { text: "MARS MIPS Assembly Simulator", url: "https://computerscience.missouristate.edu/mars-mips-simulator.htm", icon: "doc" }
+        ]
+    },
+    personalWebsite: {
+        title: "Personal Website",
+        images: [
+            "images/personalWebsiteScreenshot1.png",
+            "images/personalWebsiteScreenshot2.png"
+        ],
+        description: `This static personal website is hosted on AWS using an S3 bucket for storage, with CloudFront handling domain routing, SSL/TLS certificates, and global caching for fast, secure delivery. When changes are pushed to the main branch, GitHub Actions automatically deploys updates to the S3 bucket and invalidates the current CloudFront cache.`,
+        techStack: ["HTML", "Javascript", "Tailwind CSS", "Amazon Web Services"],
+        links: [
+            { text: "View Source Code", url: "https://github.com/Paulthelol/StaticPortfolioWebsite2526", icon: "github" }
         ]
     }
 };

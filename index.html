@@ -5,12 +5,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Paul Betzen - Software Engineer">
+    <meta name="description" content="Portfolio of Paul Betzen - Software Engineer">
 
     <title>Paul Betzen</title>
 
-    <link href="output.css" rel="stylesheet"></script>
+    <link href="output.css" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f3f4f6;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #0891b2;
+            border-radius: 20px;
+            border: 3px solid #f3f4f6;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #0e7490;
+        }
+        
+        /* Firefox Support */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #0891b2 #f3f4f6;
+        }
+    </style>
 </head>
 
 <body class="bg-white antialiased">
@@ -20,6 +44,7 @@
             <a href="#" class="hidden sm:flex text-2xl font-bold">Paul Betzen</a>
             <div class="flex space-x-6 text-lg">
                 <a href="#home" class="hover:text-cyan-600 transition duration-200">Home</a>
+                <a href="#about" class="hover:text-cyan-600 transition duration-200">About</a>
                 <a href="#projects" class="hover:text-cyan-600 transition duration-200">Projects</a>
                 <a href="#socials" class="hover:text-cyan-600 transition duration-200">Socials</a>
             </div>
@@ -41,25 +66,127 @@
             </div>
         </section>
 
+        <section id="about" class="scroll-mt-24 mb-12">
+            <h2
+                class="mx-auto w-fit py-4 px-6 text-center font-bold text-4xl bg-cyan-600 text-white shadow-lg rounded-lg mb-8">
+                About Me
+            </h2>
+
+            <div class="bg-white rounded-lg shadow-xl border border-gray-200 p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+
+                    <div class="md:w-1/2 space-y-4">
+                        <h3 class="text-2xl font-bold text-gray-800">
+                            Hello, I'm Paul.
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            I am a <span class="font-bold text-cyan-700">Software Engineer</span> passionate about
+                            designing and building systems that improve everyday user experiences.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            My experience involves building full-stack web applications using modern frameworks like
+                            <strong>Next.js</strong>, while also exploring embedded systems and <strong>IoT
+                                solutions</strong> using C++. Whether I'm designing a database schema or debugging
+                            assembly code, I enjoy solving problems that have a tangible impact.
+                        </p>
+
+                        <div class="pt-4 mt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-cyan-100 p-2 rounded-full text-cyan-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path
+                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">B.S. Computer Science</p>
+                                    <p class="text-sm text-gray-500">University of Texas at Dallas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/2 w-full bg-gray-50 rounded-xl p-6 border border-gray-200">
+                        <h4
+                            class="font-bold text-gray-800 mb-4 border-b-2 border-cyan-600 w-fit pb-1 uppercase tracking-wide text-sm">
+                            Technical Skills
+                        </h4>
+
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-xs font-semibold text-gray-500 uppercase">Languages</span>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span
+                                        class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">C++</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">Java</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">JavaScript/TS</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">SQL</span>
+                                    <span
+                                        class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">MIPS
+                                        Assembly</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="text-xs font-semibold text-gray-500 uppercase">Frameworks & Web</span>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span
+                                        class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm font-semibold rounded-full">React</span>
+                                    <span
+                                        class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm font-semibold rounded-full">Next.js</span>
+                                    <span
+                                        class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm font-semibold rounded-full">Tailwind
+                                        CSS</span>
+                                    <span
+                                        class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm font-semibold rounded-full">PostgreSQL</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="text-xs font-semibold text-gray-500 uppercase">Tools & Platforms</span>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span
+                                        class="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-semibold rounded-full">Git/GitHub</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-semibold rounded-full">AWS</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-semibold rounded-full">Linux/Unix</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-semibold rounded-full">Particle
+                                        IoT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!--Projects Card-->
         <section id="projects" class="justify-center items-center mb-4 bg-gray-400 shadow-lg rounded-lg p-6">
             <h2
                 class="mx-auto w-fit py-4 px-6 text-center font-bold text-4xl bg-cyan-600 text-white shadow-lg rounded-lg  mb-4">
                 Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="flex flex-wrap justify-center gap-8">
                 <!--Pulseout Card-->
                 <div onclick="openModal('pulseout')"
-                    class="bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
+                    class="w-full md:w-96 bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
                     <div class="h-48 overflow-hidden">
                         <img src="images/PulseoutProjectImage.jpeg"
                             onerror="this.src='https://placehold.co/600x400?text=Social+Music+Platform'"
                             alt="Social Music Platform"
                             class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="p-6 flex-grow flex flex-col">
+                    <div class="p-6 grow flex flex-col">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">Social Music Platform
                         </h3>
-                        <p class="text-gray-700 mb-4 flex-grow">A full-stack music blog website featuring user profiles,
+                        <p class="text-gray-700 mb-4 grow">A full-stack music blog website featuring user profiles,
                             comments, and Spotify API integration.</p>
 
                         <div class="mb-4 flex flex-wrap gap-2">
@@ -78,21 +205,78 @@
 
                 <!--IoT Control Card-->
                 <div onclick="openModal('iot')"
-                    class="bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
+                    class="w-full md:w-96 bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
                     <div class="h-48 overflow-hidden">
                         <img src="images/PivotIrrigationControlSystem.jpg"
                             onerror="this.src='https://placehold.co/600x400?text=IoT+System'" alt="IoT Project"
                             class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="p-6 flex-grow flex flex-col">
+                    <div class="p-6 grow flex flex-col">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">IoT Irrigation Control
                         </h3>
-                        <p class="text-gray-700 mb-4 flex-grow">Remote irrigation management solution powered by
+                        <p class="text-gray-700 mb-4 grow">Remote irrigation management solution powered by
                             Particle Boron boards.</p>
 
                         <div class="mb-4 flex flex-wrap gap-2">
                             <span class="bg-blue-700 text-white text-xs px-2 py-1 rounded-full">C++</span>
-                            <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">HTML5</span>
+                            <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">HTML</span>
+                        </div>
+
+                        <div
+                            class="mt-auto border-t pt-4 border-gray-300 flex justify-between items-center text-cyan-600 font-semibold text-sm">
+                            <span>View Details</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--MIPS Assembly Match Game Card-->
+                <div onclick="openModal('assemblyMatchGame')"
+                    class="w-full md:w-96 bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/matrixmultiplication1.png"
+                            onerror="this.src='https://placehold.co/600x400?text=MIPS+Assembly+Match+Game'"
+                            alt="Social Music Platform"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">MIPS Assembly Match
+                            Game
+                        </h3>
+                        <p class="text-gray-700 mb-4 grow">A multiplication-match game modeled in C++ and implemented in
+                            MIPS assembly.</p>
+
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-700 text-white text-xs px-2 py-1 rounded-full">C++</span>
+                            <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded-full">MIPS Assembly</span>
+                        </div>
+
+                        <div
+                            class="mt-auto border-t pt-4 border-gray-300 flex justify-between items-center text-cyan-600 font-semibold text-sm">
+                            <span>View Details</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Personal Website Card-->
+                <div onclick="openModal('personalWebsite')"
+                    class="w-full md:w-96 bg-gray-200 rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 cursor-pointer group flex flex-col h-full">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/personalWebsiteScreenshot1.png"
+                            onerror="this.src='https://placehold.co/600x400?text=Personal+Website'"
+                            alt="Social Music Platform"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-cyan-600 transition">Personal Website</h3>
+                        <p class="text-gray-700 mb-4 grow">A static personal website hosted on AWS and deployed using a
+                            simple CI/CD pipeline.</p>
+
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded-full">Javascript</span>
+                            <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">HTML</span>
+                            <span class="bg-[#FF9900] text-white text-xs px-2 py-1 rounded-full">AWS</span>
                         </div>
 
                         <div
@@ -105,47 +289,58 @@
             </div>
         </section>
 
-        <section id="socials" class="flex-col justify-center items-center bg-gray-200 shadow-lg rounded-lg">
-            <h2 class="text-center font-bold text-4xl">Socials</h2>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://www.linkedin.com/in/paulbetzen/" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-cyan-600 transition duration-300 mt-1">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
-                <a href="https://github.com/Paulthelol" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-cyan-600 transition duration-300 mt-1">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.109-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
-                <a href="mailto:paullukebetzen@gmail.com"
-                    class="text-black hover:text-cyan-600 transition duration-300">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 22 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                        </path>
-                    </svg>
-                </a>
+        <section id="socials" class="bg-gray-200 shadow-lg rounded-lg p-8 md:p-12 mb-12">
+            <div class="text-center max-w-4xl mx-auto">
+
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Let's Connect</h2>
+
+                <p class="text-xl text-gray-700 mb-10 leading-relaxed">
+                    I'm currently looking for <strong>Software Engineering Internships</strong> and new opportunities.
+                    Whether you have a question about my projects or just want to say hi, feel free to reach out!
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+
+                    <a href="https://www.linkedin.com/in/paulbetzen/" target="_blank" rel="noopener noreferrer"
+                        class="w-full md:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-transparent rounded-xl hover:border-[#0077b5] hover:text-[#0077b5] text-gray-800 font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg group">
+                        <svg class="w-6 h-6 fill-current group-hover:scale-110 transition" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/Paulthelol" target="_blank" rel="noopener noreferrer"
+                        class="w-full md:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-transparent rounded-xl hover:border-black hover:text-black text-gray-800 font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg group">
+                        <svg class="w-6 h-6 fill-current group-hover:scale-110 transition" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.109-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+                    <a href="mailto:paullukebetzen@gmail.com"
+                        class="w-full md:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-transparent rounded-xl hover:border-cyan-600 hover:text-cyan-600 text-gray-800 font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg group">
+                        <svg class="w-6 h-6 stroke-current group-hover:scale-110 transition" fill="none"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span>Email Me</span>
+                    </a>
+
+                </div>
             </div>
         </section>
     </main>
-
-    <footer class="justify-center flex">
-        <p class="bg-gray-200 shadow-lg rounded px-4 mb-2">© 2025 Paul Betzen.</p>
+    <footer class="justify-center flex pb-8">
+        <p class="bg-gray-200 shadow-lg rounded px-4 py-1 text-sm text-gray-600">© 2025 Paul Betzen.</p>
     </footer>
 
     <!-- MODAL COMPONENT -->
-    <div id="projectModal" class="fixed inset-0 z-[60] hidden overflow-y-auto" aria-labelledby="modal-title"
-        role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="closeModal()">
-        </div>
+    <div id="projectModal" class="fixed inset-0 z-60 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-gray-900/75 transition-opacity backdrop-blur-sm" onclick="closeModal()"></div>
 
         <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
             <div
