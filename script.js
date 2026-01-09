@@ -55,7 +55,22 @@ const projectData = {
         links: [
             { text: "View Source Code", url: "https://github.com/Paulthelol/StaticPortfolioWebsite2526", icon: "github" }
         ]
-    }
+    },
+    irrigationControlDashboard: {
+        title: "Irrigation Control Dashboard",
+        images: [
+            "images/IrrigationDashboardMobile1.png",
+            "images/IrrigationDashboardMobile2.png",
+            "images/IrrigationDashboardDesktopSprinklerView.png",
+            "images/IrrigationDashboardDesktopWellView.png",
+            "images/IrrigationDashboardDesktopSprinklerSettings.png"
+        ],
+        description: ``,
+        techStack: ["React", "Node.js", "Tailwind CSS", "Amazon Web Services", "GitHub Actions"],
+        links: [
+            { text: "Live Website", url: "https://irrigation.paulbetzen.dev/", icon: "external" }
+        ]
+    },
 };
 
 // Carousel State
