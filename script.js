@@ -65,7 +65,22 @@ const projectData = {
             "images/IrrigationDashboardDesktopWellView.png",
             "images/IrrigationDashboardDesktopSprinklerSettings.png"
         ],
-        description: ``,
+        description: `Previously, this system used a completely static website hosted on Wix, where each device was controlled via a simple POST request directly to the Particle API. This implementation lacked a proper data pipeline and had little user control over how data flowed, along with where data was stored (if any). 
+
+                    Given my recent certification in AWS Cloud Technical Essentials, I figured the best way to learn AWS was to dive headfirst into a full-stack project and learn as I go. I started building this project with a couple new features I aimed to implement, most of which were aimed at building a product that could scale:
+                    - User Accounts
+                    - Device Sharing
+                    - Device Status Logging
+                    - Individual Pushover Notification Controls
+                    - Custom Device Configuration Settings
+
+                    Another goal of this project was to build a system that is inexpensive to operate, which is my primary reason for choosing a serverless architecture. This serverless architecture beings by utilizing the power of AWS API Gateway, which I use to define and structure my routes, along with handling basic JWT Authorization through AWS Cognito. I then tie each route to a corresponding handler which is run in AWS Lambda. To implement streamlined data ingestion, I created custom webhooks on Particle which send corresponding device information to my REST API. This information is stored in DynamoDB and distributed using the business logic in each corresponding Lambda.
+
+                    The dynamic frontend was built using React and styled using TailwindCSS, resulting in a custom dashboard for each user. Secured through AWS Cognito, the frontend interacts with the backend using the corresponding HTTP REST API endpoints for each operation.
+
+                    Initially, I was manually allocating resources in AWS using the online console, however I quickly realized it would take over an hour to create a separate development environment for testing. This is why I implemented a CI/CD pipeline which uses AWS CloudFormation to provision and deploy resources automatically. Through the use of GitHub actions and AWS Secrets Manager, the system intelligently deploys completely separated backends, ensuring production data remains untouched. The frontend is also automatically deployed through the use of AWS amplify. This reduced the total system deployment time, starting at the initial repository clone, from over an hour to about 20 minutes!
+
+                    Although this project is deployed and operational, I have some changes I would like to make in the future, especially regarding how the frontend determines when a device state has been updated. If you would like a live demonstration or to discuss this project in more detail, feel free to contact me via the resources at the bottom of this page!`,
         techStack: ["React", "Node.js", "Tailwind CSS", "Amazon Web Services", "GitHub Actions"],
         links: [
             { text: "Live Website", url: "https://irrigation.paulbetzen.dev/", icon: "external" }
