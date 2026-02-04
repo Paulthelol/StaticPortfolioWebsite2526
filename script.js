@@ -63,7 +63,8 @@ const projectData = {
             "images/IrrigationDashboardMobile2.png",
             "images/IrrigationDashboardDesktopSprinklerView.png",
             "images/IrrigationDashboardDesktopWellView.png",
-            "images/IrrigationDashboardDesktopSprinklerSettings.png"
+            "images/IrrigationDashboardDesktopSprinklerSettings.png",
+            "images/liveDeviceViewIrrigationControl.png"
         ],
         description: `Previously, this system used a completely static website hosted on Wix, where each device was controlled via a simple POST request directly to the Particle API. This implementation lacked a proper data pipeline and had little user control over how data flowed, along with where data was stored (if any). 
 
@@ -76,7 +77,7 @@ const projectData = {
 
                     Another goal of this project was to build a system that is inexpensive to operate, which is my primary reason for choosing a serverless architecture. This serverless architecture beings by utilizing the power of AWS API Gateway, which I use to define and structure my routes, along with handling basic JWT Authorization through AWS Cognito. I then tie each route to a corresponding handler which is run in AWS Lambda. To implement streamlined data ingestion, I created custom webhooks on Particle which send corresponding device information to my REST API. This information is stored in DynamoDB and distributed using the business logic in each corresponding Lambda.
 
-                    The dynamic frontend was built using React and styled using TailwindCSS, resulting in a custom dashboard for each user. Secured through AWS Cognito, the frontend interacts with the backend using the corresponding HTTP REST API endpoints for each operation.
+                    The dynamic frontend was built using React and styled using TailwindCSS, resulting in a custom dashboard for each user. Secured through AWS Cognito, the frontend interacts with the backend using the corresponding HTTP REST API endpoints for each operation. For better efficiency and lower response times, the frontend also utilizes WebSocket APIs to form a connection which allows the dashboard to subscribe to individual device updates. When a device is being viewed in its "live" state, data is recieved on the fly as the device sends updates to the backend. This implementation is significantly more efficient than my initial implementation, which simply polled the backend using REST API requests to check if device information in the backend was updated.
 
                     Initially, I was manually allocating resources in AWS using the online console, however I quickly realized it would take over an hour to create a separate development environment for testing. This is why I implemented a CI/CD pipeline which uses AWS CloudFormation to provision and deploy resources automatically. Through the use of GitHub actions and AWS Secrets Manager, the system intelligently deploys completely separated backends, ensuring production data remains untouched. The frontend is also automatically deployed through the use of AWS amplify. This reduced the total system deployment time, starting at the initial repository clone, from over an hour to about 20 minutes!
 
